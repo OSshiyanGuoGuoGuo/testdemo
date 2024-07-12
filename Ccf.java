@@ -1,32 +1,39 @@
 import java.util.Scanner;
 
-public class Ccf {
+public class Ccf1 {
     public void foo() {
-        System.out.println("This is demo that shows changes in control flow");
         Scanner scanner = new Scanner(System.in);
+        // Stmt location changed
+        System.out.println("This is demo that shows changes in control flow");
         int a, b;
         a = scanner.nextInt();
         b = scanner.nextInt();
 
+        // delete branch
         if (a < b)
             System.out.println("a < b");
-        else
-            System.out.println("a >= b");
 
+        // add branch
         if (a == 1)
             System.out.println("a=1");
+        else
+            System.out.println("a!=1");
 
-        if (b == 1)
+        // control condition changed
+        if (b == 2)
             System.out.println(b);
 
-        if (a + b > 0)
-            System.out.println("a + b > 0");
+        // delete control condition stmt
+
+        // add control condition stmt
+        for (int i = 1; i < a; i++)
+            System.out.println(i);
 
         if (a > b && b > -1) {
-            System.out.println("stmt's branches changed");
             System.out.println();
         }
         else {
+            System.out.println("stmt's branches changed");
             System.out.println();
         }
     }
